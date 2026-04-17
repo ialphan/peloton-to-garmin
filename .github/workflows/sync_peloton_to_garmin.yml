@@ -48,7 +48,7 @@ jobs:
       env:
         DEFAULT_WORKOUT_NUM: 5
       run: |
-        cat <<EOT > configuration.local.json
+        cat <<EOT > src/ConsoleClient/configuration.local.json
         {
           "App": {
             "EnablePolling": false,
