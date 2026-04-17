@@ -71,7 +71,9 @@ namespace Common.Service
 
 		public Task UpdateSettingsAsync(Settings settings)
 		{
-			throw new NotImplementedException();
+			// No-op for file-based settings - config file is read-only at runtime.
+			_logger.Debug("UpdateSettingsAsync is a no-op for file-based settings.");
+			return Task.CompletedTask;
 		}
 
 		public Task<AppConfiguration> GetAppConfigurationAsync()
